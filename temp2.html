@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CV || Resume || Tamplate 2||@haseeb.giit</title>
+    <meta property="og:image" content="icon.png">
+<meta property="og:description" content="Easily create and download your CV with our intuitive and free CV maker tool.">
+<meta property="og:image:type" content="image/png">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="temp2.css">
+    <!-- Include html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .margin {
+            margin: 1px;
+        }
+        .mobile-only {
+    display: none;
+}
+
+/* Show the element only on screens smaller than 768px (mobile devices) */
+@media screen and (max-width: 768px) {
+    .mobile-only {
+        display: block; /* Ya flex, grid, inline-block as per your requirement */
+    }
+}
+
+        .green {
+            background-color: #09c922;
+            /* Bright red color */
+            color: white;
+            /* Text color */
+            border: none;
+            /* No border */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 10px 20px;
+            /* Button size */
+            font-size: 16px;
+            /* Text size */
+            font-weight: bold;
+            /* Bold text */
+            cursor: pointer;
+            /* Pointer cursor */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow */
+            margin: 10px;
+            transition: all 0.3s ease;
+            /* Smooth animation */
+        }
+
+        .green:hover {
+            background-color: #049b18;
+            /* Darker red on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            /* More shadow */
+            transform: translateY(-2px);
+            /* Slight hover effect */
+        }
+
+        .green:active {
+            background-color: #058316;
+            /* Even darker red on click */
+            transform: translateY(2px);
+            /* Press effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .blue {
+            background-color: #094cc9;
+            /* Bright red color */
+            color: white;
+            /* Text color */
+            border: none;
+            /* No border */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 10px 20px;
+            /* Button size */
+            font-size: 16px;
+            /* Text size */
+            font-weight: bold;
+            /* Bold text */
+            cursor: pointer;
+            /* Pointer cursor */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow */
+            margin: 10px;
+            transition: all 0.3s ease;
+            /* Smooth animation */
+        }
+
+        .blue:hover {
+            background-color: #04399b;
+            /* Darker red on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            /* More shadow */
+            transform: translateY(-2px);
+            /* Slight hover effect */
+        }
+
+        .blue:active {
+            background-color: #051c83;
+            /* Even darker red on click */
+            transform: translateY(2px);
+            /* Press effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .delete-button {
+            background-color: #ff4d4d;
+            /* Bright red color */
+            color: white;
+            /* Text color */
+            border: none;
+            /* No border */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 10px 20px;
+            /* Button size */
+            font-size: 16px;
+            /* Text size */
+            font-weight: bold;
+            /* Bold text */
+            cursor: pointer;
+            /* Pointer cursor */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow */
+            margin: 10px;
+            transition: all 0.3s ease;
+            /* Smooth animation */
+        }
+
+        .delete-button:hover {
+            background-color: #ff1a1a;
+            /* Darker red on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            /* More shadow */
+            transform: translateY(-2px);
+            /* Slight hover effect */
+        }
+
+        .delete-button:active {
+            background-color: #e60000;
+            /* Even darker red on click */
+            transform: translateY(2px);
+            /* Press effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            /* Reduced shadow */
+        }
+
+        #scroll-indicator {
+    animation: fadeInOut 2s infinite; /* Text animation */
+    font-weight: bold;
+    color: #333;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="temp2.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+    <script src="temp2.js">
+
+  
+
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="https://haseeb-giit.github.io/potfolio/">haseeb.giit</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Professional CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="temp2.html">Simple CV</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Form Section -->
+    <form class="temp2_form" onsubmit="updateCV(event)">
+        <h2 style="border-bottom: 1px solid black;">Information Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Enter your phone number">
+
+        <label for="address">Address:</label>
+        <textarea id="address" rows="3" placeholder="Enter your address"></textarea>
+
+        <label for="objectives">Objectives:</label>
+        <textarea id="objectives" rows="5" value="" placeholder="Enter your objectives"></textarea>
+
+        <label>Personal Information:</label>
+
+
+        <!-- Add New Personal Information Fields -->
+        <div id="additional-info">
+            <input type="text" class="personal-info margin" id="father-name" placeholder="Father's Name">
+            <input type="text" class="personal-info margin" id="dob" placeholder="Date of Birth">
+            <input type="text" class="personal-info margin" id="cnic" placeholder="CNIC No">
+            <input type="text" class="personal-info margin" id="gender" placeholder="Gender">
+            <input type="text" class="personal-info margin" id="religion" placeholder="Religion">
+            <input type="text" class="personal-info margin" id="marital-status" placeholder="Marital Status">
+            <input type="text" class="personal-info margin" id="nationality" placeholder="Nationality">
+            <input type="text" class="personal-info margin" id="domicile" placeholder="Domicile">
+        </div>
+
+      <label>Qualifications:</label>
+        <div id="qualifications">
+            <div class="qualification-row" id="qualification-row">
+                <input type="text" class="degree margin" id="degree" placeholder="Degree">
+                <input type="text" class="board margin" id="board" placeholder="Board">
+                <!-- <input type="text" class="institution" placeholder="Institution"> -->
+                <input type="text" class="year margin" id="year" placeholder="Year">
+                <input type="text" class="group margin" id="group" placeholder="Group">
+                <input type="text" class="marks margin" id="marks" placeholder="Marks/CGPA">
+                <input type="text" class="status margin" id="status" placeholder="Status">
+            </div>
+        </div>
+        <button type="button" class="blue" onclick="addQualificationRow()">Add Qualification</button>
+
+        <label>Experience:</label>
+        <div id="experience">
+            <div class="experience-row">
+                <input type="text" class="job-title" placeholder="Job Title">
+                <textarea class="job-description" placeholder="Job Description"></textarea>
+            </div>
+        </div>
+        <button type="button" onclick="addExperienceRow()" class="blue">Add Experience</button>
+        <!--  -->
+        <!-- <button type="button" onclick="addExperienceRow()">Add Experience</button> -->
+
+        <input type="file" id="imageUpload" accept="image/*">
+        <button type="button" id="" onclick="deleteElement()" class="delete-button">Delete Image</button>
+
+
+
+        <button type="submit" class="green" onclick="updateCV(event); updatemail(event); ">Update CV</button>
+    </form>
+
+     <br>
+
+    <div style="display: flex; justify-content: center; align-items: center; ">
+      <h2>
+        Your CV / Resume Tamplate
+      </h2>
+    </div>
+
+    <div id="scroll-indicator" class="mobile-only" style="text-align: center; margin-bottom: 10px;">
+        <span style="font-size: 20px;" >Scroll right ➡️</span>
+    </div>
+<div class="slider-container">
+        <div class="temp2_container tamplate" id="tamplate">
+            <!-- Header Section -->
+            <div class="temp2_header">
+
+                <div class="satel">
+                    <h1>Haseeb </h1>
+                    <p>Email: haseeb.giit@gmail.com | Cell no: +923421449801</p>
+                    <p>Permanent Address: H NO. E-494/A, Moh . Mistrian Near Makki Masjid tehsile Kahuta, Dist.
+                        Rawalpindi.
+                    </p>
+                </div>
+                <div class="satel">
+                    <img src="img.png" alt="" id="change_img" width="100px" height="100px" class="pro_img del">
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <!-- Objectives Section -->
+            <div class="temp2_section obj_section" style="margin-top: 65px;">
+                <h2>Objectives</h2>
+                <p>
+                    Dedicated and passionate Computer Science educator with one year of experience teaching at Arid
+                    University, specializing in web development and Python programming. Committed to creating a dynamic
+                    learning environment that encourages students to excel in technical skills while fostering their
+                    personal and academic growth. Seeking to apply my teaching experience and technical expertise to
+                    contribute to students' success and growth in the field of computer science."
+                </p>
+            </div>
+
+            <!-- Personal Information Section -->
+            <div class="temp2_section">
+                <h2>Personal Information</h2>
+                <ul class="temp2_list" class="del">
+                    <li>Fathe Name : Father</li>
+                    <li>Date Of Birth: 16 December 2002</li>
+                    <li>CNIC: 00000-00000-0</li>
+                    <li>Gender: Male</li>
+                    <li>Religion: Muslim</li>
+                    <li>Marital Status: Maried</li>
+                    <li>Nationality: Pakistan</li>
+                </ul>
+            </div>
+
+            <!-- Qualifications Section -->
+            <div class="temp2_section qua_section">
+                <h2>Qualifications</h2>
+                <table class="temp2_table">
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>University / Board</th>
+                            <!-- <th>Institution</th> -->
+                            <th>Year</th>
+                            <th>Group</th>
+                            <th>Marks/CGPA</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tablebody">
+                        <tr>
+                            <td>Bachelor of Science</td>
+                            <td>Punjab University</td>
+                            <!-- <td>ABC University</td> -->
+                            <td>2023</td>
+                            <td>Science</td>
+                            <td>3.8</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Master of Arts</td>
+                            <td>Karachi University</td>
+                            <!-- <td>XYZ University</td> -->
+                            <td>2022</td>
+                            <td>Arts</td>
+                            <td>3.6</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Diploma in Computer Science</td>
+                            <td>Institute of Technology</td>
+                            <!-- <td>Tech Institute</td> -->
+                            <td>2021</td>
+                            <td>Technology</td>
+                            <td>3.9</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>High School</td>
+                            <td>Board of Secondary Education</td>
+                            <!-- <td>ABC School</td> -->
+                            <td>2019</td>
+                            <td>Science</td>
+                            <td>3.7</td>
+                            <td>Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="temp2_section exo_section">
+                <h2>Experience</h2>
+                <ul class="temp2_list explsit">
+                    <li>
+                        <b> Retail Sales Associate</b>: Customer service, sales, store maintenance.
+                    </li>
+                    <li>
+                        <b>Food Service Worker</b>: Food prep, service, customer satisfaction, cleanliness.
+                    </li>
+                    <li>
+                        <b>Office Assistant</b>: Phone calls, filing, scheduling, admin support.
+                    </li>
+                    <li>
+                        <b>Customer Service Rep</b>: Customer inquiries, issue resolution, product info.
+                    </li>
+                    <li>
+                        <b>Freelance Writer</b>: Article/blog writing, content creation, communication.
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button id="download-btn" class="green">Download PDF</button>
+        <div id="personal-info" style="display:none;">
+            <input type="text" class="personal-info" placeholder="Enter personal information">
+                <button type="button" class="blue" onclick="addPersonalInfoRow()">Add More Info(Optitional) </button>
+      
+        </div>
+    <footer class="footer bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <!-- About Section -->
+             <div class="col-md-4">
+                <!-- <h5>About Me</h5> -->
+                <p>
+                    The CV Creator Tool is a user-friendly online platform that helps you create professional CVs in minutes. With customizable templates and an easy-to-use interface, you can quickly input your personal information, qualifications, and work experience. The tool generates a polished CV that you can download in PDF format, all for free. Perfect for job seekers who want to create an impressive CV without the hassle of using complex software
+                </p>
+            </div>
+                <!-- Contact Section -->
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Email:</strong> haseeb.giit@gmail.com</li>
+                        <li><strong>Phone:</strong> +92-342-1449801</li>
+                        <li><strong>Address:</strong> Kahuta, Rawalpindi, Pakistan</li>
+                    </ul>
+                </div>
+    
+                <div class="col-md-4">
+                    <h5>Follow Me</h5>
+                    <div class="d-flex">
+                        <a href="https://web.facebook.com/people/Haseeb-Ali/pfbid02DxneY7XyY1jf3h79tMWQqd31wMnK2g6A8nyWpQzft4xtvHTnVmpCeoS1KyNEzvbAl/" 
+                           class="btn btn-outline-light btn-sm mx-1" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/haseeb.giit?igsh=bWZ6aDJwd25ybDht" 
+                           class="btn btn-outline-light btn-sm mx-1" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.link/9lyse4" class="btn btn-outline-light btn-sm mx-1" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2024 Haseeb Ali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script>document.getElementById("download-btn").addEventListener("click", function () {
+    const resumeContainer = document.querySelector(".tamplate"); 
+    const options = {
+      
+        filename: "Resume.pdf",
+        html2canvas: { scale: 2 }, 
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }, 
+    };
+    html2pdf().set(options).from(resumeContainer).save();
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,78 @@
+
+    /* Custom styling for the navbar */
+    .navbar {
+        background-color: #343a40; /* Dark background */    
+    }
+    .navbar-brand {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    .navbar-brand:hover {
+        color: #007bff; /* Hover color */
+    }
+    .nav-link {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+        color: #007bff; /* Link hover color */
+    }
+    .nav-item.active .nav-link {
+         /* Active link color  color: #007bff;  */
+    }
+    @media (max-width: 768px) {
+        .navbar-brand {
+            font-size: 20px; /* Adjust font size for smaller screens */
+        }
+        .nav-link {
+            font-size: 14px; /* Adjust link size */
+        }
+    }
+
+    .footer {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .footer h5 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .footer p, .footer ul li {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .footer .btn {
+        border-radius: 50%;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer .btn i {
+        font-size: 18px;
+    }
+
+    .footer .btn:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .footer .row {
+            text-align: center;
+        }
+
+        .footer .btn {
+            margin: 5px auto;
+        }
+    }

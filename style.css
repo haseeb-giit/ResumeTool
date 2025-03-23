@@ -1,0 +1,324 @@
+
+body {
+font-family: 'Arial', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+
+/* display: flex; */
+/* flex-direction: column */
+/* Stack the form and resume container vertically */
+/* align-items: center; */
+/* Center both containers horizontally */
+/* justify-content: flex-start; */
+height: 100vh;
+padding: 20px;
+
+}
+
+.section{
+    margin-top: 10px;
+}
+.resume-container {
+font-family: "Century Gothic", sans-serif;
+
+width: 210mm;
+height: 297mm;
+margin: 0 auto;
+background: white;
+border: 1px solid #ddd;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 20mm;
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+overflow: hidden;
+}
+
+.left-section {
+background: #f0f0f0;
+padding: 4mm;
+width: 35%;
+box-sizing: border-box;
+}
+
+.right-section {
+padding: 10mm;
+width: 65%;
+box-sizing: border-box;
+}
+
+h1 {
+font-size: 24px;
+color: #333;
+margin-bottom: 5px;
+}
+
+h3 {
+font-size: 18px;
+color: #666;
+margin-bottom: 20px;
+}
+
+h2 {
+font-size: 16px;
+margin-bottom: 10px;
+border-bottom: 1px solid #333;
+}
+
+p {
+font-size: 12px;
+margin-bottom: 0;
+}
+
+ul {
+list-style-type: disc;
+padding-left: 20px;
+font-size: 12px;
+}
+
+.skill {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.skill span {
+width: 25%;
+font-size: 12px;
+}
+
+.bar {
+width: 75%;
+height: 8px;
+background: #ddd;
+border-radius: 5px;
+overflow: hidden;
+position: relative;
+}
+
+.fill {
+height: 100%;
+background: #007bff;
+}
+
+/* input */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+
+/* css */
+
+
+/* Form Container */
+.form-container {
+background: #ffffff;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+width: 100%;
+max-width: 600px;
+margin: 20px auto;
+}
+
+/* Form Title */
+.form-container h2 {
+text-align: center;
+color: #333;
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+margin-bottom: 15px;
+}
+
+.form-group label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+color: #555;
+}
+
+/* Input Fields and Textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+input[type="file"] {
+width: 100%;
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ddd;
+border-radius: 5px;
+outline: none;
+transition: all 0.3s ease;
+}
+
+textarea {
+resize: vertical;
+min-height: 100px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+border-color: #4CAF50;
+box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Buttons */
+button {
+background-color: #007bff;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 5px;
+font-size: 14px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: blue;
+}
+#btn-red:hover{
+    background-color: red;
+}
+button:disabled {
+background-color: #ddd;
+cursor: not-allowed;
+}
+
+/* Skill Section */
+#skill-section {
+margin-top: 20px;
+}
+
+#skill-section h3 {
+font-size: 18px;
+color: #333;
+margin-bottom: 10px;
+}
+
+.skill-entry {
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+gap: 10px;
+flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
+}
+
+.skill-entry label {
+flex: 1;
+font-size: 14px;
+color: #555;
+}
+
+.skill-entry input[type="text"] {
+flex: 2;
+}
+
+.skill-entry input[type="range"] {
+flex: 2;
+appearance: none;
+height: 5px;
+background: #ddd;
+border-radius: 5px;
+outline: none;
+transition: background-color 0.3s ease;
+}
+
+.skill-entry input[type="range"]::-webkit-slider-thumb {
+appearance: none;
+width: 15px;
+height: 15px;
+background: #4CAF50;
+border-radius: 50%;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.skill-entry button {
+flex: 1;
+font-size: 12px;
+background-color: #e74c3c;
+}
+
+.skill-entry button:hover {
+background-color: #c0392b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+.form-container {
+padding: 20px;
+}
+
+.form-container h2 {
+font-size: 20px;
+}
+
+.form-group label {
+font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="date"],
+input[type="file"] {
+font-size: 12px;
+padding: 8px;
+}
+
+button {
+font-size: 12px;
+padding: 8px 12px;
+}
+
+#skill-section h3 {
+font-size: 16px;
+}
+
+.skill-entry {
+flex-direction: column; /* Stack skill input fields vertically */
+align-items: flex-start;
+}
+
+.skill-entry input[type="text"],
+.skill-entry input[type="range"] {
+flex: unset; /* Reset flex properties for proper alignment */
+width: 100%; /* Make input fields full width */
+}
+
+.skill-entry button {
+width: 100%; /* Full-width delete button on small screens */
+}
+}
+.slider-container {
+overflow: scroll;
+}
+
+/* Scrollbar customization */
+.slider-container::-webkit-scrollbar {
+height: 8px;  /* Set the height of the scrollbar */
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+background-color: #007bff;
+border-radius: 5px;
+}
+
+.slider-container::-webkit-scrollbar-track {
+background-color: #f4f4f4;
+}

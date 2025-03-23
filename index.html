@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CV || Resume || Tamp 1||@haseeb.giit</title>
+    <meta property="og:image" content="icon.png">
+    <meta property="og:description"
+        content="Easily create and download your CV with our intuitive and free CV maker tool.">
+    <meta property="og:image:type" content="image/png">
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .nav-item.active .nav-link {
+            color: white;
+        }
+
+        /* Section Styling */
+        ._fcreate-cv-section {
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+            /* Light background color */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px auto;
+            /* Center alignment */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading Styling */
+        ._fcreate-cv-heading {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #343a40;
+            /* Dark gray color */
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph Styling */
+        ._fcreate-cv-paragraph {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #495057;
+            /* Slightly lighter gray */
+        }
+
+        /* Link Styling */
+        ._fcreate-cv-link {
+            color: #007bff;
+            /* Blue link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ._fcreate-cv-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            ._fcreate-cv-heading {
+                font-size: 1.5rem;
+            }
+
+            ._fcreate-cv-paragraph {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body style="padding: 0;">
+
+    <!-- Nav Bar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="https://haseeb-giit.github.io/potfolio/">haseeb.giit</a>
+
+            <!-- Hamburger Menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Professional CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="temp2.html">Simple CV</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="_fcreate-cv-section">
+        <h1 class="_fcreate-cv-heading">Create CV or Resume</h1>
+        <p class="_fcreate-cv-paragraph">
+            This tool allows you to easily create your CV online. Fill out the form below with your complete
+            information, and if you don’t want to upload an image, simply press the "Remove Image" button to omit it.
+            Your information is completely secure. For more details, visit
+            <a href="how_to_use.html" target="_blank" class="_fcreate-cv-link">this link</a>.
+        </p>
+    </section>
+    <!-- Form Conatiner -->
+    <div class="form-container">
+        <h2>Information Form</h2>
+        <form id="professional-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="job">Job Title</label>
+                <input type="text" id="job" name="job-title">
+            </div>
+
+            <div class="form-group">
+                <label for="profile-description">Profile Description</label>
+                <textarea id="profile-description" name="profile-description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="school-name">School Name</label>
+                <input type="text" id="school-name" name="school-name">
+            </div>
+
+            <div class="form-group">
+                <label for="company-name">Company Name</label>
+                <input type="text" id="company-name" name="company-name">
+            </div>
+
+            <div class="form-group">
+                <label for="dates">Date From - To</label>
+                <input type="date" id="date-from" name="date-from">
+                <input type="date" id="date-to" name="date-to">
+            </div>
+
+            <div class="form-group">
+                <label for="job-description">Describe Your Work</label>
+                <textarea id="job-description" name="job-description"></textarea>
+            </div>
+
+            <!-- Dynamic Skill Section -->
+            <div id="skill-section">
+                <h3>Skills</h3>
+                <div class="skill-entry">
+                    <label for="skill-name">Skill Name</label>
+                    <input type="text" class="skill-name" placeholder="Skill Name">
+                    <label for="skill-progress">Skill Progress</label>
+                    <input type="range" class="skill-progress" min="0" max="100">
+                    <button type="button" class="remove-skill">Delete</button>
+                </div>
+            </div>
+            <button type="button" id="add-skill">Add Skill</button>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="hobbies">Hobbies (comma-separated)</label>
+                <input type="text" id="hobbies" name="hobbies">
+            </div>
+
+            <!-- Education Section -->
+            <div id="education-container">
+                <h3>Education Details</h3>
+                <div class="education-block">
+                    <div class="form-group">
+                        <label for="school-name">School/University Name</label>
+                        <input type="text" class="school-name" name="school-name">
+                        <label for="dates">Date From - To</label>
+                        <input type="date" class="edu-date-from" name="date-from">
+                        <input type="date" class="edu-date-to" name="date-to">
+                        <button type="button" class="btn btn-danger remove-edu">Remove</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-education">Add More Education</button>
+            </div>
+
+            <!-- Experience Section -->
+            <div id="experience-container">
+                <h3>Experience Details</h3>
+                <div class="experience-block">
+                    <div class="form-group">
+                        <label for="company-name">Company Name</label>
+                        <input type="text" class="company-name" name="company-name">
+                        <label for="job-description">Job Description</label>
+                        <textarea class="job-description" name="job-description"></textarea>
+                        <label for="dates">Date From - To</label>
+                        <input type="date" class="exp-date-from" name="date-from">
+                        <input type="date" class="exp-date-to" name="date-to">
+                        <button type="button" class="btn btn-danger remove-exp">Remove</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-experience">Add More Experience</button>
+            </div>
+
+            <div class="form-group">
+                <label for="profile-image">Upload Profile Image</label>
+                <input type="file" id="profile-image" accept="image/*">
+            </div>
+        </form>
+    </div>
+    <button onclick="clk()">Submit</button>
+    <button onclick="removeimg()" id="btn-red">Remove Image</button>
+    <h2>Scroll Down and View Your Resume or CV</h2>
+    <div class="slider-container">
+        <div class="resume-container">
+            <div class="left-section">
+                <div class="profile-image">
+                    <div class="circle">
+                        <img src="img.png" style="border-radius: 50%;margin-left: -3px;" id="newimg" width="200px"
+                            height="200px" alt="Uploaded Image">
+                    </div>
+                </div>
+                <div class="section">
+                    <h2>PROFILE</h2>
+                    <p id="cv_profile_desc">Want to put your own image in the circle? It is easy! Select the image and
+                        do a
+                        right mouse click. Select “Fill” from the shortcut menu. Choose Picture… from the list. Navigate
+                        your computer to get the appropriate picture. Click okay to insert your selected image.
+
+                        Once your image has been inserted, select it again. Go to the Picture Tools Format menu. Click
+                        on
+                        the down arrow below “Crop” and select “Fill” from the list. This will auto adjust your image to
+                        crop to the image. You can click and drag your image to place it appropriately.
+                    </p>
+                </div>
+                <div class="section">
+                    <h2>CONTACT</h2>
+                    <p id="cv-phone"><strong>PHONE:</strong> 678-555-0103</p>
+                    <p id="cv-email"><strong>EMAIL:</strong> someone@example.com</p>
+                </div>
+                <div class="section">
+                    <h2>HOBBIES</h2>
+                    <ul id="cv-hobbies">
+                        <div class="hide">
+                            Hobby #1 <br>
+                            Hobby #2 <br>
+                            Hobby #3 <br>
+                            Hobby #4 <br>
+
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <h1 id="cv-name">NAME HERE</h1>
+                <h3 id="cv-job" class="cv-job">JOB TITLE HERE</h3>
+                <div class="section">
+                    <h2>EDUCATION</h2>
+                    <p id="cv-school">
+                        [[School Name]
+                        [Dates From] - [To]
+                        [It’s okay to brag about your GPA, awards, and honors. Feel free to summarize your coursework
+                        too.]
+
+                        [School Name]
+                        [Dates From] - [To]
+                        [It’s okay to brag about your GPA, awards, and honors. Feel free to summarize your coursework
+                        too.]
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h2>EXPERIENCE</h2>
+                    <p id="cv-company">[Company Name] [Job Title]
+                        [Dates From]–[To]
+                        [Describe your responsibilities and achievements in terms of impact and results. Use examples
+                        but
+                        keep in short.]
+
+                        [Company Name] [Job Title]
+                        [Dates From]–[To]
+                        [Describe your responsibilities and achievements in terms of impact and results. Use examples
+                        but
+                        keep in short.]
+
+                        [Company Name] [Job Title]
+                        [Dates From]–[To]
+                        [Describe your responsibilities and achievements in terms of impact and results. Use examples
+                        but
+                        keep in short.]
+
+                    </p>
+                </div>
+                <div class="section">
+                    <h2>SKILLS</h2>
+                    <div id="cv-skills">
+                        <img src="bar.PNG" alt="" class="hide">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+
+    </div>
+    <!-- <span>scroll here</span> -->
+    <br>
+    <button id="download-btn">Download PDF</button>
+
+
+
+
+    <!-- footer -->
+    <footer class="footer bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-4">
+                    <!-- <h5>About Me</h5> -->
+                    <p>
+                        The CV Creator Tool is a user-friendly online platform that helps you create professional CVs in
+                        minutes. With customizable templates and an easy-to-use interface, you can quickly input your
+                        personal information, qualifications, and work experience. The tool generates a polished CV that
+                        you can download in PDF format, all for free. Perfect for job seekers who want to create an
+                        impressive CV without the hassle of using complex software
+                    </p>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li><strong>Email:</strong> haseeb.giit@gmail.com</li>
+                        <li><strong>Phone:</strong> +92-342-1449801</li>
+                        <li><strong>Address:</strong> Kahuta, Rawalpindi, Pakistan</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="col-md-4">
+                    <h5>Follow Me</h5>
+                    <div class="d-flex">
+                        <a href="https://web.facebook.com/people/Haseeb-Ali/pfbid02DxneY7XyY1jf3h79tMWQqd31wMnK2g6A8nyWpQzft4xtvHTnVmpCeoS1KyNEzvbAl/"
+                            class="btn btn-outline-light btn-sm mx-1" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/haseeb.giit?igsh=bWZ6aDJwd25ybDht"
+                            class="btn btn-outline-light btn-sm mx-1" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.link/9lyse4" class="btn btn-outline-light btn-sm mx-1" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2024 Haseeb Ali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
