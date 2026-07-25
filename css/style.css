@@ -682,10 +682,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media (max-width: 860px){
-  .topbar{ padding: 0 14px; gap: 12px; }
+  .topbar{ padding: 0 14px; gap: 10px; }
   .topbar__templates{ order: 3; width:100%; justify-content:center; margin-top:0; }
-  .topbar .btn--ghost{ display:none; }
-  .topbar__actions{ margin-left:auto; }
+  .topbar__actions{ order: 5; margin-left:auto; flex-wrap:wrap; row-gap:8px; }
 
   .app{ grid-template-columns: 1fr; }
   .panel--form, .panel--preview{ grid-column: 1 / -1; }
@@ -693,9 +692,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   /* mobile edit/preview switch */
   .topbar{ flex-wrap: wrap; height:auto; padding: 10px 14px; row-gap:10px; }
+  .topbar__brand{ order: 1; }
+  .theme-picker{ order: 4; }
   .topbar__mobile-toggle{
     display:flex; align-items:center; gap:8px;
-    margin-left:auto; border:none; background:none; cursor:pointer;
+    order: 2; margin-left:auto; border:none; background:none; cursor:pointer;
     font-size: 12px; font-weight:700; color: var(--ink-soft);
   }
   .mv-switch{
@@ -732,6 +733,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 @media (max-width: 480px){
   .topbar__brand span{ display:none; }
-  .btn span{ display:none; }
-  .theme-picker__toggle span{ display:none; }
+  .btn-label{ display:none; }
+  .theme-picker__label{ display:none; }
+
+  .btn{ padding: 9px; border-radius:50%; }
+  .btn svg{ margin:0; }
+  .theme-picker__toggle{ padding: 7px; border-radius:50%; }
+  .topbar__actions{ gap:8px; }
 }

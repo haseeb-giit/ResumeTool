@@ -36,17 +36,23 @@
   <div class="theme-picker" id="theme-picker">
     <button class="theme-picker__toggle" id="theme-picker-toggle" type="button" aria-haspopup="true" aria-expanded="false">
       <span class="theme-picker__swatch" id="theme-picker-swatch" aria-hidden="true"></span>
-      <span>Theme</span>
+      <span class="theme-picker__label">Theme</span>
     </button>
     <div class="theme-picker__panel" id="theme-picker-panel" role="menu" hidden></div>
   </div>
 
   <div class="topbar__actions">
-    <button class="btn btn--ghost" id="sample-btn" type="button">Load sample</button>
-    <button class="btn btn--ghost" id="reset-btn" type="button">Clear</button>
+    <button class="btn btn--ghost" id="sample-btn" type="button">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg>
+      <span class="btn-label">Load sample</span>
+    </button>
+    <button class="btn btn--ghost" id="reset-btn" type="button">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V4.8c0-.44.36-.8.8-.8h4.4c.44 0 .8.36.8.8V7m-9 0 .7 12.1c.04.6.55 1.06 1.15 1.06h6.3c.6 0 1.11-.46 1.15-1.06L18 7"/></svg>
+      <span class="btn-label">Clear</span>
+    </button>
     <button class="btn btn--primary" id="download-btn" type="button">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-      Download PDF
+      <span class="btn-label">Download PDF</span>
     </button>
   </div>
 
